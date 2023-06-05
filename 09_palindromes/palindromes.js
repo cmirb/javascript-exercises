@@ -1,10 +1,10 @@
-const palindromes = function (str) {
+const palindromes = function(str) {
     // normalize input string, remove non-alphanumeric characters
-    const normalizeStr = str.replace(/\W/g, '').toLowerCase();
+    const normalizedStr = str.replace(/[^A-Za-z]/g, '').toLowerCase();
     // create reversed version of normalized string
-    const reversedStr = normaledStr.split('').reverse().join('');
-    return normalizeStr === reversedStr;
-};
-
+    const reversedStr = normalizedStr.split('').reverse().join('');
+    return normalizedStr === reversedStr;
+  };
+  
 // Do not edit below this line
 module.exports = palindromes;
